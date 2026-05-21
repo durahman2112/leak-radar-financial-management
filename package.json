@@ -5,13 +5,21 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "e2e": "playwright test",
+    "e2e:video": "playwright test tests/e2e/leak-radar-demo-video.spec.ts --project=chromium",
+    "e2e:report": "playwright show-report",
     "generate": "nuxt generate",
+    "playwright:install": "playwright install chromium",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.23",
     "nuxt": "^4.4.6",
     "vue": "^3.5.34",
     "vue-router": "^5.0.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0"
   }
 }

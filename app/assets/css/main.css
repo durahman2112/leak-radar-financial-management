@@ -1,0 +1,52 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.2), transparent 34rem),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.16), transparent 30rem),
+    #020617;
+  color: #e2e8f0;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(45, 212, 191, 0.35);
+}
+
+.radar-sweep {
+  animation: radar-sweep 5s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+.pulse-marker {
+  animation: pulse-marker 2.4s ease-in-out infinite;
+}
+
+@keyframes radar-sweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-marker {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.22);
+  }
+}

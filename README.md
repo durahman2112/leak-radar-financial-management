@@ -1,75 +1,48 @@
-# Nuxt Minimal Starter
+# Leak Radar Financial Management
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Prototipe aplikasi Nuxt 4 untuk menemukan kebocoran finansial berulang: langganan tidak terpakai, biaya tersembunyi, dan uji coba yang berubah menjadi tagihan.
 
-## Setup
+## Fitur Saat Ini
 
-Make sure to install dependencies:
+- Dasbor dengan menu fitur terpisah
+- Ringkasan kebocoran, metrik utama, dan peringatan prioritas yang dapat diklik
+- Radar interaktif dengan tooltip dan popup detail kebocoran
+- Manajer langganan dengan tambah, ubah, hapus, dan penyimpanan lokal
+- Pelacakan keuangan bulanan untuk pemasukan, pengeluaran, target tabungan, dan dampak kebocoran
+- Pencari biaya tersembunyi dengan status perbaikan
+- Penjaga uji coba untuk menandai trial agar masuk pantauan
+- Sakelar Batal untuk memproses pembatalan massal dari antrean
+- Reset Data untuk menghapus state lokal dan mulai dari data kosong
+
+## Pengembangan
+
+Proyek ini menggunakan Nuxt 4. Utility Tailwind aktif melalui runtime Tailwind browser di `nuxt.config.ts`.
+Data prototipe tidak memakai impor file dan tidak membawa data awal. State CRUD tersimpan di `localStorage` dari `app/app.vue`.
+Jika data lokal membuat tampilan tidak sesuai saat pengujian, gunakan tombol **Reset Data** di sidebar/header untuk menghapus state `localStorage` dan memulai ulang CRUD dari data kosong.
+Mata uang menggunakan Rupiah Indonesia.
+Headless UI digunakan untuk kontrol interaktif seperti pilihan kategori, dialog, dan switch penjaga uji coba.
+
+Jalankan lokal:
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+Buka `http://localhost:3000`.
 
-Build the application for production:
+## Video E2E
+
+Playwright dipakai untuk membuat video uji penggunaan aplikasi dari data kosong sampai data finansial nyata tersimpan.
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+npm install
+npm run playwright:install
+npm run e2e:video
 ```
 
-Locally preview production build:
+Video hasil test tersimpan di `test-results/e2e-video`. Buka laporan visual dengan:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+npm run e2e:report
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
