@@ -53,30 +53,29 @@
 - **The "Subscription Audit" Bot:** An AI that scans statements and periodically presents a "Keep/Kill/Negotiate" list of all recurring charges.
 - **Leakage Heat Map:** A visual dashboard where "leaks" are represented as actual water drips—the faster the drip, the bigger the financial leak.
 - **Smart Fee Finder:** Automatically identifies ATM fees, foreign transaction fees, or account maintenance fees and suggests alternative banks or settings.
-- **The "Plug the Leak" Game:** A gamified experience where every dollar saved from a cancelled subscription is visually "poured" into a digital treasure chest (a high-yield savings account).
-- **Trial Guard:** A virtual card or browser extension that detects "Free Trial" signups and automatically sets a cancellation reminder or blocks the charge after the trial ends.
+- **Deep-Dive Audit Dashboard:** Utilizing the larger screen real estate of a web app to show complex data visualizations (e.g., Sankey diagrams of cash flow, detailed subscription tables) that wouldn't fit on mobile.
+- **Trial Guard Browser Extension:** A Chrome/Edge extension that detects when a user is on a checkout page for a "Free Trial" and automatically sets a cancellation reminder or blocks the charge after the trial ends.
 
 ---
 
 ## Phase 4: Prototype
-*Low-fidelity concept for the "Leak Radar" dashboard.*
+*Low-fidelity concept for the "Leak Radar" web platform.*
 
-### Concept: Leak Radar Mobile App
-- **Screen 1: The Radar.** A circular radar interface that pings "leaks." 
-    - Red dots = High-priority leaks (unused high-cost subscriptions).
-    - Yellow dots = Potential leaks (price increases, redundant services).
-- **Screen 2: The Kill Switch.** A list of detected leaks with a simple "Cancel for me" or "Remind me later" button.
-- **Screen 3: The Savings Tank.** A visual representation of all money recovered from plugged leaks, showing the projected 10-year growth of that money if invested.
+### Concept: Leak Radar Web Platform
+- **Screen 1: The Command Center (Dashboard):** A wide, multi-panel layout. Left sidebar for navigation, main canvas for the "Radar" data visualization (showing leaks), and a right-hand panel for actionable alerts.
+- **Screen 2: The Kill Switch Data Grid:** A rich, sortable table view of all recurring charges, allowing users to select multiple subscriptions and click a bulk "Cancel Selected" button.
+- **Screen 3: The Extension Popup:** A mockup of a browser extension dropping down when a user visits a service's checkout page, showing a "Guard this Trial" button and automatic reminder settings.
 
 ---
 
 ## Phase 5: Test
 *How to validate the concept.*
 
-1. **User Interview with Prototype:** Show the "Radar" screen to a peer. 
-    - *Question:* "Does this visual make you feel more or less stressed about your money?"
-    - *Observation:* Do they immediately try to tap the "leaks"?
-2. **The "Manual Leak Audit" Test:** Ask a user to manually find their leaks for 15 minutes, then show them what the "Radar" would find automatically.
-    - *Metric:* The "Aha!" moment—the difference between what they found and what the tool found.
-3. **Kill Switch Trust Test:** Ask if they would trust an app to cancel a subscription on their behalf.
-    - *Goal:* Identify the level of automation users are comfortable with.
+1. **Contextual Usability Test (Extension):** Have a user sit at a laptop and "shop" for a subscription. Show the mock Extension Popup at checkout.
+    - *Question:* "Does this feel like a helpful guard or an annoying interruption?"
+    - *Observation:* Do they trust the "Guard this Trial" button?
+2. **Information Density Check (Dashboard):** Show the rich data grid of the "Command Center."
+    - *Question:* "Is this too much information, or does it give you the control you've been missing?"
+    - *Metric:* Time taken to identify their highest-priority "leak" from the grid.
+3. **Kill Switch Trust Test:** Ask if they would trust a web platform to bulk-cancel subscriptions on their behalf.
+    - *Goal:* Identify the level of automation users are comfortable with on a desktop vs. mobile device.
